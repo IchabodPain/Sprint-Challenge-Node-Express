@@ -1,11 +1,25 @@
 {
-  "name": "sprint-challenge-node-express",
+  "name": "bitcoin-delta-calculator",
   "version": "1.0.0",
-  "description": "A challenge to asses Node and Express knowledge",
+  "description": "Determines the change in value of BTC from yesterday to today.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
   },
   "author": "Ivan Mora",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "node-fetch": "^2.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IchabodPain/Sprint-Challenge-Node-Express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IchabodPain/Sprint-Challenge-Node-Express/issues"
+  },
+  "homepage": "https://github.com/IchabodPain/Sprint-Challenge-Node-Express#readme"
 }
