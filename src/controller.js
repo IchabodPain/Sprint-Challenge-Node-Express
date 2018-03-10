@@ -15,9 +15,16 @@ router.get('/compare', (req, res) => {
     .then(getYesterdayPrice)
     .then(fetchedPrice => {
       console.log("Price of BTC yesterday was:", fetchedPrice, '   ', todayPrice);
+      yesterdayPrice = fetchedPrice;
       return todayPrice - fetchedPrice;
     })
-    .then(delta => res.send(String(delta)))
+    .then(delta => res.send(
+      {
+        BTCValueNow: todayPrice,
+        BTCValueYesterdayClose: yesterdayPrice,
+        deltaInBTCValue: String(delta),
+      }
+    ))
     .catch(err => console.log("There was an error: ", err));
 });
 
